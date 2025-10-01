@@ -1,5 +1,7 @@
-def handler(request):
-    return{
-        "statuscode":200,
-        "body":"Hello from python on versel!"
-    }
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Hello, Vercel!"
